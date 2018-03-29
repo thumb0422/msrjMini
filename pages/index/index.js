@@ -36,6 +36,16 @@ Page({
       ]
     })
 
+    //ClassicItems经典款
+    that.setData({
+      ClassicItems: [
+        { "id": 1, "name": "经典棉麻", "orders": 1, "pic": "../../images/index/Classic/410.png" },
+        { "id": 2, "name": "经典提花布帘", "orders": 2, "pic": "../../images/index/Classic/411.png" },
+        { "id": 3, "name": "精品提花布帘纱", "orders": 3, "pic": "../../images/index/Classic/412.png" },
+        { "id": 4, "name": "经典炎夏圣品", "orders": 4, "pic": "../../images/index/Classic/413.png" },
+      ]
+    })
+
     //ChineseItems中国风
     that.setData({
       ChineseItems: [
