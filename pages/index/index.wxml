@@ -2,61 +2,32 @@
 <view class="container">
   <view>
     <swiper class="swiper_box" indicator-dots="{{indicatorDots}}" vertical="{{vertical}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" bindchange="swiperchange">
-      <block wx:for="{{images}}" wx:key="id">
+      <block wx:for="{{topContents}}" wx:key="id">
         <swiper-item>
-          <image src="{{item.picurl}}" class="slide-image" />
-          <!-- <text>{{item.name}}</text>  -->
+          <navigator url="../detail/detail?id={{item.id}}">
+            <image src="{{item.picurl}}" class="slide-image" />
+          </navigator>
         </swiper-item>
       </block>
     </swiper>
   </view>
-  <view class="text">
-    <view class="line_flag"></view>
-    <text>经典款</text>
-  </view>
 
-  <view class="venues_box">
-    <view class="venues_list">
-      <block wx:for="{{ClassicItems}}" wx:key="id">
-        <view class="venues_item">
-          <image src="{{item.pic}}" />
-          <text>{{item.name}}</text>
-        </view>
-      </block>
+  <block wx:for="{{productsDatas}}" wx:for-item="products" wx:key="title" wx:for-index="index">
+    <view class="text">
+      <view class="line_flag"></view>
+      <text>{{products.title}}</text>
     </view>
-  </view>
-
-  <view class="text">
-    <view class="line_flag"></view>
-    <text>中国风</text>
-  </view>
-
-  <view class="venues_box">
-    <view class="venues_list">
-      <block wx:for="{{ChineseItems}}" wx:key="id">
-        <view class="venues_item">
-          <image src="{{item.pic}}" />
-          <text>{{item.name}}</text>
-        </view>
-      </block>
+    <view class="venues_box">
+      <view class="venues_list">
+        <block wx:for="{{products.data}}" wx:for-item="productDatas" wx:key="id" wx:for-index="index">
+          <view class="venues_item">
+            <navigator url="../detail/detail?id={{productDatas.id}}">
+              <image src="{{productDatas.pic}}" />
+              <text>{{productDatas.name}}</text>
+            </navigator>
+          </view>
+        </block>
+      </view>
     </view>
-  </view>
-
-  <view class="text">
-    <view class="line_flag"></view>
-    <text>欧美风</text>
-  </view>
-
-  <view class="venues_box">
-    <view class="venues_list">
-      <block wx:for="{{EuropeanItems}}" wx:key="id">
-        <view class="venues_item">
-          <navigator url="../detail/detail?id={{item.id}}">
-            <image src="{{item.pic}}" />
-            <text>{{item.name}}</text>
-          </navigator>
-        </view>
-      </block>
-    </view>
-  </view>
+  </block>
 </view>

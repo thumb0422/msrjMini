@@ -1,7 +1,6 @@
 //app.js
 App({
   onLaunch: function () {
-    console.log('App Launch')
     //调用API从本地缓存中获取数据
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
@@ -26,10 +25,10 @@ App({
     }
   },
   onShow: function () {
-    console.log('App Show')
+
   },
   onHide: function () {
-    console.log('App Hide')
+
   },
   globalData: {
     userInfo: null
