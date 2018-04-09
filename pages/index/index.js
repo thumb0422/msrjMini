@@ -59,10 +59,10 @@ Page({
     //EuropeanItems
     that.setData({
       EuropeanItems: [
-        { "id": 1, "name": "初夏尚新", "orders": 1, "pic": "../../images/index/European/310.png" },
-        { "id": 2, "name": "相约遮光季", "orders": 2, "pic": "../../images/index/European/311.png" },
-        { "id": 3, "name": "地中海风情", "orders": 3, "pic": "../../images/index/European/312.png" },
-        { "id": 4, "name": "棉麻风格", "orders": 4, "pic": "../../images/index/European/313.png" },
+        { "id": "010101", "name": "初夏尚新", "orders": 1, "pic": "../../images/index/European/310.png" },
+        { "id": "2", "name": "相约遮光季", "orders": 2, "pic": "../../images/index/European/311.png" },
+        { "id": "3", "name": "地中海风情", "orders": 3, "pic": "../../images/index/European/312.png" },
+        { "id": "4", "name": "棉麻风格", "orders": 4, "pic": "../../images/index/European/313.png" },
       ]
     })
   }

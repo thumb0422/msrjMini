@@ -1,21 +1,23 @@
 var app = getApp()
-// datas = require('detail.json')
+var datas = require('../../utils/detailData.js')
 Page({
-  data: {
-    "id": "010101",
-    "title": "伊妮德",
-    "chs": "伊妮德",
-    "eng": "",
-    "index": "1",
-    "imageUrl": "../../images/detail/ynd.jpg"
-  },
+  data: datas,
 
   onLoad: function (options) {
     var that = this
-    console.log('当前点击的是----', options.id)
-    that.setData({
-      id: options.id,
-      imageUrl: this.data.imageUrl
-    })
+    var detailId = options.id
+    console.log('当前点击的是----', detailId)
+    console.log(that.data)
+    for (let i = 0; i < that.data.length; i++) {
+      var tempDataDic = that.data[i]
+      if (tempDataDic.id == detailId) {
+        console.log('找到了----', tempDataDic)
+        that.setData({
+          id: detailId,
+          imageUrl: tempDataDic.imageUrl
+        })
+      }
+    }
+
   }
 })
