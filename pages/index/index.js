@@ -1,5 +1,6 @@
 //获取应用实例
 var app = getApp()
+var indexDatas = require('../../utils/indexData.js')
 Page({
   data: {
     indicatorDots: true,
@@ -7,9 +8,9 @@ Page({
     autoplay: true,
     interval: 3000,
     duration: 1000,
-    loadingHidden: true  // loading
+    loadingHidden: true,
+    indexTmpData:indexDatas
   },
-
   //事件处理函数
   swiperchange: function (e) {
     //console.log(e.detail.current)
@@ -25,45 +26,45 @@ Page({
         userInfo: userInfo
       })
     })
+    var images = []
+    var ClassicItems = []
+    var ChineseItems = []
+    var EuropeanItems = []
+    console.log('data = ', that.data)
+    var datasArray = that.data.indexTmpData.indexDatas.datas
+    console.log('indexDatas = ',datasArray)
+
+    var len = datasArray.length
+    console.log('len = ', len)
+    for (let i = 0; i < len; i++) {
+      var tempDataDic = datasArray[i]
+      console.log('++++', tempDataDic)
+      console.log('++++key', tempDataDic.keys)
+      if (tempDataDic.key == "top"){
+        console.log('top', tempDataDic)
+      } else if (tempDataDic.key == "classic"){
+        console.log('classic', tempDataDic)
+      }
+    }
 
     //topBanner
     that.setData({
-      images: [
-        { "id": 1, "name": "Top1", "orders": 1, "picurl": "../../images/index/TopBanner/110.png"},
-        { "id": 2, "name": "Top2", "orders": 2, "picurl": "../../images/index/TopBanner/111.png"},
-        { "id": 3, "name": "Top3", "orders": 3, "picurl": "../../images/index/TopBanner/112.png"},
-        { "id": 4, "name": "Top4", "orders": 4, "picurl": "../../images/index/TopBanner/113.png"},
-      ]
+      images: images
     })
 
     //ClassicItems经典款
     that.setData({
-      ClassicItems: [
-        { "id": 1, "name": "经典棉麻", "orders": 1, "pic": "../../images/index/Classic/410.png" },
-        { "id": 2, "name": "经典提花布帘", "orders": 2, "pic": "../../images/index/Classic/411.png" },
-        { "id": 3, "name": "精品提花布帘纱", "orders": 3, "pic": "../../images/index/Classic/412.png" },
-        { "id": 4, "name": "经典炎夏圣品", "orders": 4, "pic": "../../images/index/Classic/413.png" },
-      ]
+      ClassicItems: ClassicItems
     })
 
     //ChineseItems中国风
     that.setData({
-      ChineseItems: [
-        { "id": 1, "name": "夏季棉麻", "orders": 1, "pic": "../../images/index/Chinese/210.png" },
-        { "id": 2, "name": "精品提花布帘", "orders": 2, "pic": "../../images/index/Chinese/211.png" },
-        { "id": 3, "name": "精品提花布帘纱", "orders": 3, "pic": "../../images/index/Chinese/212.png" },
-        { "id": 4, "name": "炎夏圣品", "orders": 4, "pic": "../../images/index/Chinese/213.png" },
-      ]
+      ChineseItems: ChineseItems
     })
 
     //EuropeanItems
     that.setData({
-      EuropeanItems: [
-        { "id": "010101", "name": "初夏尚新", "orders": 1, "pic": "../../images/index/European/310.png" },
-        { "id": "2", "name": "相约遮光季", "orders": 2, "pic": "../../images/index/European/311.png" },
-        { "id": "3", "name": "地中海风情", "orders": 3, "pic": "../../images/index/European/312.png" },
-        { "id": "4", "name": "棉麻风格", "orders": 4, "pic": "../../images/index/European/313.png" },
-      ]
+      EuropeanItems: EuropeanItems
     })
   }
 })
