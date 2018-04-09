@@ -6,12 +6,11 @@ Page({
   onLoad: function (options) {
     var that = this
     var detailId = options.id
-    console.log('当前点击的是----', detailId)
-    console.log(that.data)
-    for (let i = 0; i < that.data.length; i++) {
-      var tempDataDic = that.data[i]
+    var datasArray = that.data.detailDatas.datas
+    var len = datasArray.length
+    for (let i = 0; i < len; i++) {
+      var tempDataDic = datasArray[i]
       if (tempDataDic.id == detailId) {
-        console.log('找到了----', tempDataDic)
         that.setData({
           id: detailId,
           imageUrl: tempDataDic.imageUrl

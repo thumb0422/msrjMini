@@ -20,5 +20,5 @@ var localDetailData = {
 }
 
 module.exports = {
-  detailData:localDetailData
+  detailDatas:localDetailData
 }
