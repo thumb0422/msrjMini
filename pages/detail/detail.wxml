@@ -1,0 +1,5 @@
+<!--detail.wxml-->
+<view class="container">
+  <image class="imageScrrenView" src="{{imageUrl}}" mode="scaleToFill">
+  </image>
+</view>
