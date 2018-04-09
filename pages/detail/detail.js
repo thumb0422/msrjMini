@@ -15,6 +15,9 @@ Page({
           id: detailId,
           imageUrl: tempDataDic.imageUrl
         })
+        wx.setNavigationBarTitle({
+          title: tempDataDic.title + '详情介绍',
+        })
       }
     }
 
