@@ -2,6 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/detail/detail",
+    "pages/shopmall/index",
+    "pages/order/index",
     "pages/my/my"
   ],
   "window": {
@@ -23,6 +25,18 @@
         "iconPath": "images/my/5100.png",
         "selectedIconPath": "images/my/5101.png",
         "text": "首页"
+      },
+      {
+        "pagePath": "pages/shopmall/index",
+        "iconPath": "images/shopmall/5100.png",
+        "selectedIconPath": "images/shopmall/5101.png",
+        "text": "商城"
+      },
+      {
+        "pagePath": "pages/order/index",
+        "iconPath": "images/order/5100.png",
+        "selectedIconPath": "images/order/5101.png",
+        "text": "购物车"
       },
       {
         "pagePath": "pages/my/my",
