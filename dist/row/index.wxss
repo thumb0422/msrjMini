@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 .zan-row:after{content:"";display:table;clear:both}
+=======
+.i-row:after{content:"";display:table;clear:both}
+>>>>>>> 4f7df53d0e4b1cad4f5a13a9ac4882c3be2c29dd

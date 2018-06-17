@@ -1,4 +1,6 @@
 /**app.wxss**/
+ /* @import './style/weui.less';  */
+  /* @import './style/weui.min.css';  */
 @import "./style/layout.wxss";
 
 .container {

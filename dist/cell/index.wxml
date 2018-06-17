@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <view 
   catchtap="cellTap"
   class="cell-class zan-cell {{ isLastCell ? 'last-cell' : '' }} {{ isLink ? 'zan-cell--access' : '' }}">
@@ -18,4 +19,21 @@
       <slot name="footer"></slot>
     </block>
   </view>
+=======
+<view bindtap="handleTap" class="i-class i-cell {{ isLastCell ? 'i-cell-last' : '' }} {{ isLink ? 'i-cell-access' : '' }}">
+    <view class="i-cell-icon">
+        <slot name="icon"></slot>
+    </view>
+    <view class="i-cell-bd">
+        <view wx:if="{{ title }}" class="i-cell-text">{{ title }}</view>
+        <view wx:if="{{ label }}" class="i-cell-desc">{{ label }}</view>
+        <slot></slot>
+    </view>
+    <view catchtap="navigateTo" class="i-cell-ft">
+        <block wx:if="{{value}}">{{ value }}</block>
+        <block wx:else>
+            <slot name="footer"></slot>
+        </block>
+    </view>
+>>>>>>> 4f7df53d0e4b1cad4f5a13a9ac4882c3be2c29dd
 </view>

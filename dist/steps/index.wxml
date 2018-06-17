@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <view class="zan-steps zan-steps--{{ type == 'vertical' ? 'vsteps' : 'steps' }} zan-steps--{{ steps.length }} {{ className }}">
   <view
     wx:for="{{ steps }}" wx:for-item="step" wx:key="unique" wx:for-index="index"
@@ -10,4 +11,8 @@
     </view>
     <view class="zan-steps__line"></view>
   </view>
+=======
+<view class="i-class i-steps">
+    <slot></slot>
+>>>>>>> 4f7df53d0e4b1cad4f5a13a9ac4882c3be2c29dd
 </view>

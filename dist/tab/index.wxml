@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <view
   class="zan-tab"
   style="{{ height ? 'height:' + height + 'px' : '' }}"
@@ -45,3 +46,14 @@
     </view>
   </view>
 </template>
+=======
+<view class="i-class i-tabs-tab {{ scroll ? 'i-tabs-tab-scroll' : '' }} {{ current ? 'i-tabs-tab-current' : '' }}">
+    <i-badge dot="{{ dot }}" count="{{ dot ? 0 : count }}">
+        <view bindtap="handleClickItem">
+            <view class="i-tabs-tab-title {{ current ? 'i-tabs-tab-title-current' : '' }}" wx:if="{{ current && currentColor }}" style="color: {{ currentColor }}">{{ title }}</view>
+            <view class="i-tabs-tab-title {{ current ? 'i-tabs-tab-title-current' : '' }}" wx:else>{{ title }}</view>
+        </view>
+    </i-badge>
+    <view class="i-tabs-tab-bar" wx:if="{{ current }}" style="background: {{ currentColor }}"></view>
+</view>
+>>>>>>> 4f7df53d0e4b1cad4f5a13a9ac4882c3be2c29dd

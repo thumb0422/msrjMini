@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <view class="zan-badge">
   <view
     class="zan-badge__text"
@@ -5,4 +6,10 @@
   >
     <slot></slot>
   </view>
+=======
+<view class="i-class i-badge">
+    <slot></slot>
+    <view class="i-badge-dot" wx:if="{{ dot }}"></view>
+    <view class="i-badge-count i-class-alone" wx:elif="{{ count !== 0 }}">{{ finalCount }}</view>
+>>>>>>> 4f7df53d0e4b1cad4f5a13a9ac4882c3be2c29dd
 </view>

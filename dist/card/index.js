@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use strict';
 
 Component({
@@ -24,3 +25,31 @@ Component({
     status: String
   }
 });
+=======
+Component({
+    externalClasses: ['i-class'],
+
+    options: {
+        multipleSlots: true
+    },
+
+    properties: {
+        full: {
+            type: Boolean,
+            value: false
+        },
+        thumb: {
+            type: String,
+            value: ''
+        },
+        title: {
+            type: String,
+            value: ''
+        },
+        extra: {
+            type: String,
+            value: ''
+        }
+    }
+});
+>>>>>>> 4f7df53d0e4b1cad4f5a13a9ac4882c3be2c29dd

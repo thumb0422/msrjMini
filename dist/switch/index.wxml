@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <view
   class="zan-switch zan-switch--{{ checked ? 'on' : 'off' }} {{ disabled ? 'zan-swtich--disabled' : '' }}"
   checked="{{ checked }}"
@@ -10,3 +11,31 @@
   </view>
   <view class="zan-switch__bg"></view>
 </view>
+=======
+<view class="i-class i-switch {{parse.setSize(size)}} {{parse.setCurrent(value,disabled)}}" bindtap="toggle">
+    <input type="text" :name="name" wx:value="{{value}}" class="i-switch-hide-input"></input>
+    <view class="i-switch-inner" wx:if="{{value === true}}">
+        <slot name="open"></slot>
+    </view>
+    <view class="i-switch-inner" wx:else>
+        <slot name="close"></slot>
+    </view>
+</view>
+<wxs module="parse">
+var sizes = ['large', 'default'];
+var prefixCls = 'i-switch';
+module.exports = {
+    setSize : function( size ){
+        var index = sizes.indexOf( size );
+        return prefixCls + ( index > -1 ? ( '-'+size ) : 'default' )
+    },
+    setCurrent : function( value,disabled ){
+        var className = value && !disabled ? prefixCls + '-checked' : '';
+        if( disabled ){
+            className += ' ' + prefixCls + '-disabled';
+        }
+        return className;
+    }
+}
+</wxs>
+>>>>>>> 4f7df53d0e4b1cad4f5a13a9ac4882c3be2c29dd
