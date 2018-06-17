@@ -1,5 +1,0 @@
-<<<<<<< HEAD
-<view class="zan-icon zan-icon-{{ type }}"></view>
-=======
-<view class="i-class i-icon i-icon-{{ type }}" style="font-size: {{ size }}px; {{ color ? 'color:' + color : '' }}"></view>
->>>>>>> 4f7df53d0e4b1cad4f5a13a9ac4882c3be2c29dd

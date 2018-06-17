@@ -1,5 +1,0 @@
-<<<<<<< HEAD
-  <view class="col-class zan-col {{ col ? 'zan-col-' + col : '' }} {{ offset ? 'zan-col-offset-' + offset : '' }}"><slot></slot></view>
-=======
-<view class="i-class i-col {{ span ? 'i-col-span-' + span : '' }} {{ offset ? 'i-col-offset-' + offset : '' }}"><slot></slot></view>
->>>>>>> 4f7df53d0e4b1cad4f5a13a9ac4882c3be2c29dd

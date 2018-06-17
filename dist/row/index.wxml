@@ -1,5 +1,0 @@
-<<<<<<< HEAD
-<view class="row-class zan-row"><slot></slot></view>
-=======
-<view class="i-class i-row"><slot></slot></view>
->>>>>>> 4f7df53d0e4b1cad4f5a13a9ac4882c3be2c29dd
