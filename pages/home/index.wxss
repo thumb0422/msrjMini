@@ -1,1 +1,10 @@
 /* pages/home/index.wxss */
+.swiper_box {
+    width: 100%;
+}
+
+swiper-item image {
+    width:94%;
+    display: inline-block;
+    overflow: hidden;
+}
