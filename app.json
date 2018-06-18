@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/home/index",
     "pages/index/index",
     "pages/detail/detail",
     "pages/shopmall/index",
@@ -21,7 +22,7 @@
     "backgroundColor": "#292929",
     "list": [
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/home/index",
         "iconPath": "images/tabbar/homeUnSelected.png",
         "selectedIconPath": "images/tabbar/homeSelected.png",
         "text": "首页"

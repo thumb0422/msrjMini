@@ -1,6 +1,6 @@
 /**app.wxss**/
 @import 'style/weui.wxss';
-@import '/style/layout.wxss';
+@import 'style/layout.wxss';
 
 .container {
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
