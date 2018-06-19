@@ -1,7 +1,7 @@
 <!--pages/home/index.wxml-->
 <view class='page'>
   <swiper indicator-dots="{{indicatorDots}}" vertical="{{vertical}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-    <block wx:for="{{imgUrls}}" wx:key="id">
+    <block wx:for="{{headImgeDatas}}" wx:key="id">
       <swiper-item>
         <image src="{{item}}" class="slide-image" />
       </swiper-item>
@@ -9,10 +9,10 @@
   </swiper>
   <view class='page__bd'>
     <view class="weui-grids">
-      <block wx:for="{{grids}}" wx:key="id" wx:for-item="grids" wx:for-index="id">
+      <block wx:for="{{sudokuDatas}}" wx:key="id" wx:for-item="sudokuData" wx:for-index="id">
         <navigator url="" class="weui-grid" hover-class="weui-grid_active">
           <!-- <image class="weui-grid__icon" src="../images/icon_tabbar.png" />  -->
-          <view class="weui-grid__label">{{grids.title}}</view>
+          <view class="weui-grid__label">{{sudokuData.title}}</view>
         </navigator>
       </block>
     </view>
