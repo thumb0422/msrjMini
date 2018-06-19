@@ -68,10 +68,9 @@ Page({
    */
   onPullDownRefresh: function () {
     console.log('onPullDownRefresh')
-    var that = this
-    that.requestHeadData();
-    that.requestSudokuData();
-    that.requestContentData();
+    this.requestHeadData();
+    this.requestSudokuData();
+    this.requestContentData();
   },
 
   /**
@@ -93,6 +92,21 @@ Page({
    */
   requestHeadData:function(){
     console.log('requestHeadData')
+    /**
+    wx.request({
+      url: 'test.php', //仅为示例，并非真实的接口地址
+      data: {
+        x: '',
+        y: ''
+      },
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function (res) {
+        console.log(res.data)
+      }
+    })
+    */
     var that = this
     that.setData({
       headImgeDatas: [
@@ -144,49 +158,64 @@ Page({
    */
   requestContentData: function () {
     console.log('requestContentData')
+    /**
+    wx.request({
+      url: 'test.php', //仅为示例，并非真实的接口地址
+      data: {
+        x: '',
+        y: ''
+      },
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      success: function (res) {
+        console.log(res.data)
+      }
+    })
+    */
     var that = this
     that.setData({
       venueslist: [
         {
           "id": "0001", "title": "春季款", "datas": [
-            { "id": "00010001", "title": "春季款001", "discount": "8折", "imgUrl": "http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg" },
-            { "id": "00010002", "title": "春季款002", "discount": "8折", "imgUrl": "http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg" },
-            { "id": "00010003", "title": "春季款003", "discount": "8折", "imgUrl": "http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg" },
-            { "id": "00010004", "title": "春季款004", "discount": "8折", "imgUrl": "http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg" },
-            { "id": "00010005", "title": "春季款005", "discount": "8折", "imgUrl": "http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg" },
-            { "id": "00010006", "title": "春季款006", "discount": "8折", "imgUrl": "http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg" },
+            { "id": "00010001", "title": "春季款001", "salePrice":"200.09","discount": "9折", "imgUrl": "http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg" },
+            { "id": "00010002", "title": "春季款002", "salePrice": "110","discount": "9折", "imgUrl": "http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg" },
+            { "id": "00010003", "title": "春季款003", "salePrice": "178.23","discount": "7折", "imgUrl": "http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg" },
+            { "id": "00010004", "title": "春季款004", "salePrice": "998","discount": "1.5折", "imgUrl": "http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg" },
+            { "id": "00010005", "title": "春季款005", "salePrice": "618","discount": "3折", "imgUrl": "http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg" },
+            { "id": "00010006", "title": "春季款006", "salePrice": "201","discount": "8折", "imgUrl": "http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg" },
           ]
         },
         {
           "id": "0002", "title": "夏季款", "datas": [
-            { "id": "00020001", "title": "夏季款1", "discount": "8折", "imgUrl": "http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg" },
-            { "id": "00020002", "title": "夏季款2", "discount": "8折", "imgUrl": "http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg" },
-            { "id": "00020003", "title": "夏季款3", "discount": "8折", "imgUrl": "http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg" },
-            { "id": "00020004", "title": "夏季款4", "discount": "8折", "imgUrl": "http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg" },
-            { "id": "00020005", "title": "夏季款5", "discount": "8折", "imgUrl": "http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg" },
-            { "id": "00020006", "title": "夏季款6", "discount": "8折", "imgUrl": "http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg" },
-            { "id": "00020007", "title": "夏季款7", "discount": "8折", "imgUrl": "http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg" },
+            { "id": "00020001", "title": "夏季款1", "salePrice": "209","discount": "1.8折", "imgUrl": "http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg" },
+            { "id": "00020002", "title": "夏季款2", "salePrice": "278","discount": "2.8折", "imgUrl": "http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg" },
+            { "id": "00020003", "title": "夏季款3", "salePrice": "265","discount": "3.8折", "imgUrl": "http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg" },
+            { "id": "00020004", "title": "夏季款4", "salePrice": "20","discount": "4.8折", "imgUrl": "http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg" },
+            { "id": "00020005", "title": "夏季款5", "salePrice": "100","discount": "1.8折", "imgUrl": "http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg" },
+            { "id": "00020006", "title": "夏季款6", "salePrice": "99","discount": "2.8折", "imgUrl": "http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg" },
+            { "id": "00020007", "title": "夏季款7", "salePrice": "199","discount": "4.8折", "imgUrl": "http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg" },
           ]
         },
         {
           "id": "0003", "title": "秋季款", "datas": [
-            { "id": "00030001", "title": "秋季款1", "discount": "8折", "imgUrl": "http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg" },
-            { "id": "00030002", "title": "秋季款2", "discount": "8折", "imgUrl": "http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg" },
-            { "id": "00030003", "title": "秋季款3", "discount": "8折", "imgUrl": "http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg" },
+            { "id": "00030001", "title": "秋季款1", "salePrice": "200.09","discount": "8折", "imgUrl": "http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg" },
+            { "id": "00030002", "title": "秋季款2", "salePrice": "200.09","discount": "8折", "imgUrl": "http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg" },
+            { "id": "00030003", "title": "秋季款3", "salePrice": "200.09","discount": "8折", "imgUrl": "http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg" },
           ]
         },
         {
           "id": "0004", "title": "冬季款", "datas": [
-            { "id": "00040001", "title": "冬季款1", "discount": "8折", "imgUrl": "http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg" },
-            { "id": "00040002", "title": "冬季款2", "discount": "8折", "imgUrl": "http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg" },
-            { "id": "00040003", "title": "冬季款3", "discount": "8折", "imgUrl": "http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg" },
-            { "id": "00040004", "title": "冬季款4", "discount": "8折", "imgUrl": "http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg" },
-            { "id": "00040005", "title": "冬季款5", "discount": "8折", "imgUrl": "http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg" },
-            { "id": "00040006", "title": "冬季款6", "discount": "8折", "imgUrl": "http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg" },
-            { "id": "00040007", "title": "冬季款7", "discount": "8折", "imgUrl": "http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg" },
-            { "id": "00040008", "title": "冬季款8", "discount": "8折", "imgUrl": "http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg" },
-            { "id": "00040009", "title": "冬季款9", "discount": "8折", "imgUrl": "http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg" },
-            { "id": "00040010", "title": "冬季款10", "discount": "8折", "imgUrl": "http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg" },
+            { "id": "00040001", "title": "冬季款1", "salePrice": "200.09","discount": "8折", "imgUrl": "http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg" },
+            { "id": "00040002", "title": "冬季款2", "salePrice": "200.09","discount": "8折", "imgUrl": "http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg" },
+            { "id": "00040003", "title": "冬季款3", "salePrice": "200.09","discount": "8折", "imgUrl": "http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg" },
+            { "id": "00040004", "title": "冬季款4", "salePrice": "200.09","discount": "8折", "imgUrl": "http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg" },
+            { "id": "00040005", "title": "冬季款5", "salePrice": "200.09","discount": "8折", "imgUrl": "http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg" },
+            { "id": "00040006", "title": "冬季款6", "salePrice": "200.09","discount": "8折", "imgUrl": "http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg" },
+            { "id": "00040007", "title": "冬季款7", "salePrice": "200.09","discount": "8折", "imgUrl": "http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg" },
+            { "id": "00040008", "title": "冬季款8", "salePrice": "200.09","discount": "8折", "imgUrl": "http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg" },
+            { "id": "00040009", "title": "冬季款9", "salePrice": "200.09","discount": "8折", "imgUrl": "http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg" },
+            { "id": "00040010", "title": "冬季款10", "salePrice": "200.09","discount": "8折", "imgUrl": "http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg" },
           ]
         },
       ],

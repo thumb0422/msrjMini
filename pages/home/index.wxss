@@ -27,10 +27,6 @@ swiper-item image {
 }
 
 .venues_item discountDesc {
-  /* display: flex; */
-  /* align-items: right; */
-  /* position: relative; */
-  /* box-sizing: border-box; */
   float: right;
   margin-right: 10px;
   font-size: 15px;
@@ -39,8 +35,8 @@ swiper-item image {
 
 view.text {
   display: flex;
+  flex-direction: row;
   align-items: center;
-  position: relative;
   padding: 10px 10px 10px 12px;
   font-size: 15px;
   color: #656565;
@@ -58,30 +54,22 @@ view.text:before {
 
 .line_flag {
   width: 3px;
-  height: 100%;
   height: 15px;
   display: inline-block;
   background-color: #f9f027;
 }
 
 view.text titletext {
+  flex: 1;
   margin-left: 10px;
   line-height: 18px;
   font-weight: bold;
 }
 
 view.text moreBtn {
-  /* margin-right: 10px; */
-  float: right;
   padding-right: 10px;
   width: 30px;
   color: red;
   line-height: 18px;
   font-weight: bold;
-}
-
-seperateView{
-  width:100%;
-  height: 5px;
-  color: green;
 }
