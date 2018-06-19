@@ -6,7 +6,8 @@
     "pages/shopmall/index",
     "pages/order/index",
     "pages/my/my",
-    "pages/list/index"
+    "pages/list/index",
+    "pages/WTest/index"
   ],
   "window": {
     "backgroundTextStyle": "white",
