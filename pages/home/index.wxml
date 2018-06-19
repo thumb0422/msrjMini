@@ -1,20 +1,48 @@
 <!--pages/home/index.wxml-->
 <view class='page'>
   <swiper indicator-dots="{{indicatorDots}}" vertical="{{vertical}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-    <block wx:for="{{imgUrls}}">
-     <swiper-item>
-       <image src="{{item}}" class="slide-image"/>
-     </swiper-item>
+    <block wx:for="{{imgUrls}}" wx:key="id">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" />
+      </swiper-item>
     </block>
   </swiper>
-
-<!-- <swiper class="swiper_box" indicator-dots="{{indicatorDots}}" vertical="{{vertical}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" bindchange="swiperchange">
-      <block wx:for="{{topContents}}" wx:key="id">
-        <swiper-item>
-          <navigator url="../detail/detail?id={{item.id}}">
-            <image src="{{item.picurl}}" class="slide-image" />
-          </navigator>
-        </swiper-item>
+  <view class='page__bd'>
+    <view class="weui-grids">
+      <block wx:for="{{grids}}" wx:key="id" wx:for-item="grids" wx:for-index="id">
+        <navigator url="" class="weui-grid" hover-class="weui-grid_active">
+          <!-- <image class="weui-grid__icon" src="../images/icon_tabbar.png" />  -->
+          <view class="weui-grid__label">{{grids.title}}</view>
+        </navigator>
       </block>
-</swiper> -->
+    </view>
+  </view>
+
+  <view class='view'>
+    <block wx:for="{{venueslist}}" wx:key="id" wx:for-item="venueslist" wx:for-index="id">
+      <view class="text">
+        <view class="line_flag"></view>
+        <titletext>{{venueslist.title}}</titletext>
+        <navigator url=''>
+          <moreBtn>更多</moreBtn>
+        </navigator>
+      </view>
+      <view class="venues_box">
+        <view class="venues_list">
+          <block wx:for="{{venueslist.datas}}" wx:for-item="listInfo" wx:key="id" wx:for-index="index">
+            <view class="venues_item">
+              <navigator url="">
+                <image src="{{listInfo.imgUrl}}" />
+                <text>{{listInfo.title}}</text>
+                <discountDesc>{{listInfo.discount}}</discountDesc>
+              </navigator>
+            </view>
+          </block>
+        </view>
+      </view>
+    </block>
+  </view>
+  <!-- <view>
+    <seperateView></seperateView>
+  </view> -->
 </view>
