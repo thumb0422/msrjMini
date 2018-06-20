@@ -1,1 +1,12 @@
 /* pages/list/index.wxss */
+.listGrid{
+
+}
+
+.listGrid image{
+
+}
+
+.listGrid itemTitle{
+  
+}

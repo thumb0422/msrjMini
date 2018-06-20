@@ -1,2 +1,13 @@
 <!--pages/list/index.wxml-->
-<text>pages/list/index.wxml</text>
+<view class='page'>
+  <block wx:for="{{mockData}}" wx:for-item="item" wx:key="id" wx:for-index="index">
+    <view class="listGrid">
+      <navigator url="">
+        <image src="{{item.imgUrl}}"></image>
+        <view class="itemTitle">
+          {{item.title}}
+        </view>
+      </navigator>
+    </view>
+  </block>
+</view>
