@@ -32,9 +32,7 @@
           <block wx:for="{{venueslist.datas}}" wx:for-item="item" wx:key="id" wx:for-index="index">
             <view class="venues_item">
               <navigator url="">
-                <view class='itemImage'>
-                  <image src="{{item.imgUrl}}"></image>
-                </view>
+                <image src="{{item.imgUrl}}"></image>
                 <view class="itemTitle">
                   {{item.title}}
                 </view>
