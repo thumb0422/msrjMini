@@ -24,18 +24,25 @@
         <view class="line_flag"></view>
         <titletext>{{venueslist.title}}</titletext>
         <navigator url=''>
-          <moreBtn>更多</moreBtn>
+          <moreBtn>更多>></moreBtn>
         </navigator>
       </view>
       <view class="venues_box">
         <view class="venues_list">
-          <block wx:for="{{venueslist.datas}}" wx:for-item="listInfo" wx:key="id" wx:for-index="index">
+          <block wx:for="{{venueslist.datas}}" wx:for-item="item" wx:key="id" wx:for-index="index">
             <view class="venues_item">
               <navigator url="">
-                <image src="{{listInfo.imgUrl}}" />
-                <text>{{listInfo.title}}</text>
-                <!-- <text>{{listInfo.salePrice}}</text> -->
-                <discountDesc>{{listInfo.discount}}</discountDesc>
+                <view class='itemImage'>
+                  <image src="{{item.imgUrl}}"></image>
+                </view>
+                <view class="itemTitle">
+                  {{item.title}}
+                </view>
+                <view class="itemPrice">
+                  <p class="newPrice">￥{{item.salePrice}}</p>
+                  <p class="oldPrice">￥{{item.oldPrice}}</p>
+                  <p class="discount">{{item.discount}}</p>
+                </view>
               </navigator>
             </view>
           </block>
@@ -43,7 +50,4 @@
       </view>
     </block>
   </view>
-  <!-- <view>
-    <seperateView></seperateView>
-  </view> -->
 </view>

@@ -46,6 +46,12 @@
         "iconPath": "images/tabbar/myUnselected.png",
         "selectedIconPath": "images/tabbar/mySelected.png",
         "text": "我的"
+      },
+      {
+        "pagePath": "pages/WTest/index",
+        "iconPath": "images/tabbar/myUnselected.png",
+        "selectedIconPath": "images/tabbar/mySelected.png",
+        "text": "TEST"
       }
     ]
   },
