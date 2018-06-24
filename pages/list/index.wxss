@@ -1,4 +1,8 @@
 /* pages/list/index.wxss */
+page{
+  background-color: green;
+}
+
 .panel{
   display: flex;
   flex-direction: row;

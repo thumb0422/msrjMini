@@ -220,11 +220,7 @@ Page({
   leftClick: function (e) {
     var that = this
     let leftDataId = e.currentTarget.dataset['id']
-    console.log(leftDataId)
-    console.log('that.rightDatas = ', that.rightDatas)
-    console.log('this.rightDatas = ', this.rightDatas)
     let filterData = util.JsonArrayFilter(that.data.rightDatas, leftDataId)
-    console.log(filterData)
     that.setData({
       rightFilterDatas: filterData
     })
