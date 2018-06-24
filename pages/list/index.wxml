@@ -1,13 +1,13 @@
 <!--pages/list/index.wxml-->
-<view class='page'>
-  <block wx:for="{{mockData}}" wx:for-item="item" wx:key="id" wx:for-index="index">
-    <view class="listGrid">
-      <navigator url="">
-        <image src="{{item.imgUrl}}"></image>
-        <view class="itemTitle">
-          {{item.title}}
-        </view>
-      </navigator>
-    </view>
-  </block>
+<view class='panel'>
+  <view class='leftPanel'>
+    <block wx:for="{{leftDatas}}" wx:key="id" wx:for-item="leftData" wx:for-index="id">
+      <view class="leftPanelData" bindtap="leftClick" data-id="{{leftData.id}}">{{leftData.title}}</view>
+    </block>
+  </view>
+  <view class='rightPanel'>
+    <block wx:for="{{rightFilterDatas}}" wx:key="id" wx:for-item="rightData" wx:for-index="id">
+      <view class="rightPanelData">{{rightData.title}}</view>
+    </block>
+  </view>
 </view>

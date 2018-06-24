@@ -1,12 +1,25 @@
 /* pages/list/index.wxss */
-.listGrid{
-
+.panel{
+  display: flex;
+  flex-direction: row;
+  background-color: yellow;
+}
+.panel .leftPanel{
+  width: 90px;
+  background-color: green;
 }
 
-.listGrid image{
-
+.panel .leftPanel .leftPanelData{
+  text-align: left;
+  color: red;
 }
 
-.listGrid itemTitle{
-  
+.panel .rightPanel{
+  flex: 1;
+  background-color:blue;
+}
+
+.panel .rightPanel .rightPanelData{
+  text-align: center;
+  color: yellow;
 }

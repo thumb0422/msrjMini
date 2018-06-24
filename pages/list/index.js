@@ -1,11 +1,14 @@
 // pages/list/index.js
+var util = require('../../utils/util.js')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    mockData: []
+    leftDatas: [],
+    rightDatas: [],
+    rightFilterDatas: [],
   },
 
   /**
@@ -68,35 +71,163 @@ Page({
    * 生成测试数据 
    */
   requestMockData: function () {
-    var that = this
-    that.setData({
-      mockData: [
-        {
-          id: "0001",
-          title: "春季款",
-          imgUrl: "http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg"
-        },
-        {
-          id: "0002",
-          title: "夏季款",
-          imgUrl: "http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg"
-        },
-        {
-          id: "0003",
-          title: "秋季款",
-          imgUrl: "http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg"
-        },
-        {
-          id: "0004",
-          title: "冬季款",
-          imgUrl: "http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg"
-        },
-        {
-          id: "0005",
-          title: "秋冬季款",
-          imgUrl: "http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg"
-        },
+    this.setData({
+      leftDatas: [{
+        id: "0001",
+        title: "春季款",
+        imgUrl: "http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg"
+      },
+      {
+        id: "0002",
+        title: "夏季款",
+        imgUrl: "http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg"
+      },
+      {
+        id: "0003",
+        title: "秋季款",
+        imgUrl: "http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg"
+      },
+      {
+        id: "0004",
+        title: "冬季款",
+        imgUrl: "http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg"
+      },
+      {
+        id: "0005",
+        title: "秋冬季款5",
+        imgUrl: "http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg"
+      },
+      {
+        id: "0006",
+        title: "秋冬季款6",
+        imgUrl: "http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg"
+      },
+      {
+        id: "0007",
+        title: "秋冬季款7",
+        imgUrl: "http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg"
+      },
+      {
+        id: "0008",
+        title: "秋冬季款8",
+        imgUrl: "http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg"
+      },
+      {
+        id: "0009",
+        title: "秋冬季款9",
+        imgUrl: "http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg"
+      },
+      {
+        id: "0010",
+        title: "秋冬季款10",
+        imgUrl: "http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg"
+      },
+      {
+        id: "0011",
+        title: "秋冬季款11",
+        imgUrl: "http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg"
+      },
       ],
+
+      rightDatas: [{
+        id: "0001",
+        title: "春季款001",
+      },
+      {
+        id: "0001",
+        title: "春季款002",
+      },
+      {
+        id: "0003",
+        title: "春季款003",
+      },
+      {
+        id: "0003",
+        title: "春季款004",
+      },
+      {
+        id: "0003",
+        title: "春季款005",
+      },
+      {
+        id: "0005",
+        title: "春季款006",
+      },
+      {
+        id: "0006",
+        title: "春季款007",
+      },
+      {
+        id: "0006",
+        title: "春季款008",
+      },
+      {
+        id: "0006",
+        title: "春季款009",
+      },
+      {
+        id: "0006",
+        title: "春季款010",
+      },
+      {
+        id: "0006",
+        title: "春季款011",
+      },
+      {
+        id: "0006",
+        title: "春季款012",
+      },
+      {
+        id: "0006",
+        title: "春季款013",
+      },
+      {
+        id: "0009",
+        title: "春季款014",
+      },
+      {
+        id: "0009",
+        title: "春季款015",
+      },
+      {
+        id: "0009",
+        title: "春季款016",
+      },
+      {
+        id: "0009",
+        title: "春季款017",
+      },
+      {
+        id: "0009",
+        title: "春季款018",
+      },
+      {
+        id: "0009",
+        title: "春季款019",
+      },
+      {
+        id: "0009",
+        title: "春季款020",
+      },
+      {
+        id: "0009",
+        title: "春季款021",
+      },
+      ]
     })
-  }
+  },
+
+  leftClick: function (e) {
+    var that = this
+    let leftDataId = e.currentTarget.dataset['id']
+    console.log(leftDataId)
+    that.setData({
+      //TODO:怎么过滤出来数据呢
+      rightFilterDatas: [{
+        id:leftDataId,
+        title: '款式' + leftDataId
+      }]
+    })
+  },
+
 })
