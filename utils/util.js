@@ -14,8 +14,15 @@ const formatNumber = n => {
   return n[1] ? n : '0' + n
 }
 
-function jsonFilter(json, filter) {
-  return {}
+function JsonArrayFilter(jsonArray, filter) {
+  let resultDataArray = []
+  for (var index in jsonArray) {
+    let obj = jsonArray[index]
+    if (obj.id == filter) {
+      resultDataArray.push(obj)
+    }
+  }
+  return resultDataArray
 }
 
 /** 
@@ -72,7 +79,7 @@ function objToStrMap(obj) {
 
 module.exports = {
   formatTime: formatTime,
-  jsonFilter: jsonFilter,
+  JsonArrayFilter: JsonArrayFilter,
   stringToJson: stringToJson,
   jsonToString: jsonToString,
   mapToJson: mapToJson,

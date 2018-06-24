@@ -216,17 +216,17 @@ Page({
       ]
     })
   },
-
+  
   leftClick: function (e) {
     var that = this
     let leftDataId = e.currentTarget.dataset['id']
     console.log(leftDataId)
+    console.log('that.rightDatas = ', that.rightDatas)
+    console.log('this.rightDatas = ', this.rightDatas)
+    let filterData = util.JsonArrayFilter(that.data.rightDatas, leftDataId)
+    console.log(filterData)
     that.setData({
-      //TODO:怎么过滤出来数据呢
-      rightFilterDatas: [{
-        id:leftDataId,
-        title: '款式' + leftDataId
-      }]
+      rightFilterDatas: filterData
     })
   },
 
