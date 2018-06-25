@@ -23,7 +23,7 @@
       <view class="text">
         <view class="line_flag"></view>
         <titletext>{{venueslist.title}}</titletext>
-        <navigator url=''>
+        <navigator url="../list/index?id={{venueslist.id}}">
           <moreBtn>更多>></moreBtn>
         </navigator>
       </view>

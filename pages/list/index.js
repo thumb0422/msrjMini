@@ -6,6 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    currentIndex:-1,
     leftDatas: [],
     rightDatas: [],
     rightFilterDatas: [],
@@ -16,6 +17,7 @@ Page({
    */
   onLoad: function (options) {
     this.requestMockData()
+    console.log('-------',options)
   },
 
   /**
